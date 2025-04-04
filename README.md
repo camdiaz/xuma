@@ -12,6 +12,7 @@ Este proyecto es un sistema de gestión de pedidos para una tienda online, desar
 - API REST con Express
 - Validaciones de datos de entrada
 - Sistema de logs para todas las acciones
+- Sistema de autenticación con JWT
 
 ## Estructura del Proyecto
 
@@ -41,6 +42,8 @@ orders-management-system/
 - Jest para pruebas unitarias e integración
 - UUID para generación de identificadores únicos
 - Patrón Singleton para la persistencia de datos
+- JWT para autenticación
+- bcrypt para encriptación de contraseñas
 
 ## Requisitos
 
@@ -91,19 +94,63 @@ npm run test:coverage
 
 ## API Endpoints
 
+### Autenticación
+
+- `POST /api/auth/register`: Registrar un nuevo usuario
+  - Body: 
+    ```json
+    {
+      "email": "usuario@ejemplo.com",
+      "password": "contraseña123",
+      "name": "Usuario Ejemplo"
+    }
+    ```
+  - Respuesta:
+    ```json
+    {
+      "user": {
+        "id": "uuid",
+        "email": "usuario@ejemplo.com",
+        "name": "usuario ejemplo"
+      },
+      "token": "jwt-token"
+    }
+    ```
+
+- `POST /api/auth/login`: Iniciar sesión
+  - Body: 
+    ```json
+    {
+      "email": "usuario@ejemplo.com",
+      "password": "contraseña123"
+    }
+    ```
+  - Respuesta:
+    ```json
+    {
+      "user": {
+        "id": "uuid",
+        "email": "usuario@ejemplo.com",
+        "name": "usuario ejemplo"
+      },
+      "token": "jwt-token"
+    }
+    ```
+
 ### Pedidos
 
 - `POST /api/orders`: Crear un nuevo pedido
+  - Headers: `Authorization: Bearer <token>`
   - Body: 
     ```json
     {
       "customer": {
-        "name": "Nombre Cliente",
+        "name": "nombre cliente",
         "email": "cliente@ejemplo.com"
       },
       "products": [
         {
-          "name": "Producto ejemplo",
+          "name": "producto ejemplo",
           "price": 100,
           "quantity": 2
         }
@@ -112,14 +159,19 @@ npm run test:coverage
     ```
 
 - `GET /api/orders`: Obtener todos los pedidos
+  - Headers: `Authorization: Bearer <token>`
 
 - `GET /api/orders/:id`: Obtener un pedido por su ID
+  - Headers: `Authorization: Bearer <token>`
 
 - `GET /api/orders/search?email=cliente@ejemplo.com`: Buscar pedidos por email del cliente
+  - Headers: `Authorization: Bearer <token>`
 
 - `GET /api/orders/status?status=pendiente`: Buscar pedidos por estado
+  - Headers: `Authorization: Bearer <token>`
 
 - `PATCH /api/orders/:id/status`: Actualizar el estado de un pedido
+  - Headers: `Authorization: Bearer <token>`
   - Body: 
     ```json
     {
@@ -146,6 +198,13 @@ Se ha seguido un enfoque de arquitectura por capas:
 ### Persistencia
 
 Se ha implementado un patrón Singleton para el repositorio, simulando una base de datos en memoria.
+
+### Autenticación
+
+- Autenticación mediante JWT (JSON Web Tokens)
+- Tokens con expiración de 24 horas
+- Encriptación de contraseñas con bcrypt
+- Middleware de autenticación para proteger rutas
 
 ### Logging
 

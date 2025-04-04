@@ -119,6 +119,72 @@
  *           items:
  *             type: string
  *           description: List of validation errors
+ * 
+ *     User:
+ *       type: object
+ *       required:
+ *         - id
+ *         - email
+ *         - name
+ *       properties:
+ *         id:
+ *           type: string
+ *           format: uuid
+ *           description: User unique identifier
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: User email
+ *         name:
+ *           type: string
+ *           description: User name
+ *         password:
+ *           type: string
+ *           description: Hashed password (only returned in registration)
+ * 
+ *     UserInput:
+ *       type: object
+ *       required:
+ *         - email
+ *         - password
+ *         - name
+ *       properties:
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: User email
+ *         password:
+ *           type: string
+ *           description: User password
+ *         name:
+ *           type: string
+ *           description: User name
+ * 
+ *     LoginInput:
+ *       type: object
+ *       required:
+ *         - email
+ *         - password
+ *       properties:
+ *         email:
+ *           type: string
+ *           format: email
+ *           description: User email
+ *         password:
+ *           type: string
+ *           description: User password
+ * 
+ *     AuthResponse:
+ *       type: object
+ *       required:
+ *         - user
+ *         - token
+ *       properties:
+ *         user:
+ *           $ref: '#/components/schemas/User'
+ *         token:
+ *           type: string
+ *           description: JWT token for authentication
  */
 
 export enum OrderStatus {
@@ -157,4 +223,22 @@ export interface OrderInput {
 
 export interface OrderUpdate {
   status: OrderStatus;
+}
+
+export interface User {
+  id: string;
+  email: string;
+  password: string;
+  name: string;
+}
+
+export interface UserInput {
+  email: string;
+  password: string;
+  name: string;
+}
+
+export interface LoginInput {
+  email: string;
+  password: string;
 } 

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { OrderController } from '../controllers/OrderController';
 import { validateOrderInput, validateStatusUpdate } from '../middleware/validation';
+import { authenticate } from '../middleware/auth';
 
 const router = Router();
 const orderController = new OrderController();
@@ -18,6 +19,8 @@ const orderController = new OrderController();
  *   post:
  *     summary: Create a new order
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:
@@ -37,6 +40,12 @@ const orderController = new OrderController();
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/ValidationError'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -44,7 +53,7 @@ const orderController = new OrderController();
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.post('/', validateOrderInput, orderController.createOrder);
+router.post('/', authenticate, validateOrderInput, orderController.createOrder);
 
 /**
  * @swagger
@@ -52,6 +61,8 @@ router.post('/', validateOrderInput, orderController.createOrder);
  *   get:
  *     summary: Get all orders
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: A list of orders
@@ -61,6 +72,12 @@ router.post('/', validateOrderInput, orderController.createOrder);
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/Order'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -68,7 +85,7 @@ router.post('/', validateOrderInput, orderController.createOrder);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.get('/', orderController.getAllOrders);
+router.get('/', authenticate, orderController.getAllOrders);
 
 /**
  * @swagger
@@ -76,6 +93,8 @@ router.get('/', orderController.getAllOrders);
  *   get:
  *     summary: Find orders by customer email
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: query
  *         name: email
@@ -98,6 +117,12 @@ router.get('/', orderController.getAllOrders);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -105,7 +130,7 @@ router.get('/', orderController.getAllOrders);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.get('/search', orderController.getOrdersByCustomerEmail);
+router.get('/search', authenticate, orderController.getOrdersByCustomerEmail);
 
 /**
  * @swagger
@@ -113,6 +138,8 @@ router.get('/search', orderController.getOrdersByCustomerEmail);
  *   get:
  *     summary: Find orders by status
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: query
  *         name: status
@@ -135,6 +162,12 @@ router.get('/search', orderController.getOrdersByCustomerEmail);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -142,7 +175,7 @@ router.get('/search', orderController.getOrdersByCustomerEmail);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.get('/status', orderController.getOrdersByStatus);
+router.get('/status', authenticate, orderController.getOrdersByStatus);
 
 /**
  * @swagger
@@ -150,6 +183,8 @@ router.get('/status', orderController.getOrdersByStatus);
  *   get:
  *     summary: Get an order by ID
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -170,6 +205,12 @@ router.get('/status', orderController.getOrdersByStatus);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -177,7 +218,7 @@ router.get('/status', orderController.getOrdersByStatus);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.get('/:id', orderController.getOrderById);
+router.get('/:id', authenticate, orderController.getOrderById);
 
 /**
  * @swagger
@@ -185,6 +226,8 @@ router.get('/:id', orderController.getOrderById);
  *   patch:
  *     summary: Update order status
  *     tags: [Orders]
+ *     security:
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -211,6 +254,12 @@ router.get('/:id', orderController.getOrderById);
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
+ *       401:
+ *         description: Not authenticated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
  *         content:
@@ -218,6 +267,6 @@ router.get('/:id', orderController.getOrderById);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.patch('/:id/status', validateStatusUpdate, orderController.updateOrderStatus);
+router.patch('/:id/status', authenticate, validateStatusUpdate, orderController.updateOrderStatus);
 
 export default router; 

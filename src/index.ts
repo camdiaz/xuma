@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import orderRoutes from './routes/OrderRoutes';
+import authRoutes from './routes/AuthRoutes';
 import { requestLogger } from './middleware/logging';
 import logger from './utils/logger';
 import { setupSwagger } from './utils/swagger';
@@ -13,6 +14,7 @@ app.use(requestLogger);
 setupSwagger(app);
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
 
 app.get('/', (req: Request, res: Response) => {

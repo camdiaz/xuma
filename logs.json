@@ -509,5 +509,1066 @@
       "statusCode": 400,
       "responseTime": "1ms"
     }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:25.981Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:25.985Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.039Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.039Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.040Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.041Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.042Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:26.165Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/favicon-32x32.png",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/favicon-32x32.png",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:42.037Z",
+    "level": "INFO",
+    "message": "Server running at http://localhost:3000",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:28:42.038Z",
+    "level": "INFO",
+    "message": "Swagger documentation available at http://localhost:3000/api-docs",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.319Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.321Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "2ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.945Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.948Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.956Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.959Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:28:45.960Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.073Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.086Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "4ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.151Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.153Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.156Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.156Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.158Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:30.314Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/favicon-32x32.png",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/favicon-32x32.png",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:41.997Z",
+    "level": "INFO",
+    "message": "Server running at http://localhost:3000",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:41:41.997Z",
+    "level": "INFO",
+    "message": "Swagger documentation available at http://localhost:3000/api-docs",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:41:44.520Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:44.522Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:45.225Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:45.229Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:45.232Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:45.233Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:41:45.235Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:43:00.899Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/register",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "body": {
+        "email": "user@example.com",
+        "password": "string",
+        "name": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:43:00.996Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "95ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:43:30.127Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "email": "user@example.com",
+        "password": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:43:30.229Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "99ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:45:00.856Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "Cam",
+          "email": "cam@example.com"
+        },
+        "products": [
+          {
+            "name": "Pizza",
+            "price": 60000,
+            "quantity": 1
+          },
+          {
+            "name": "Hamburguesa",
+            "price": 45789,
+            "quantity": 5
+          },
+          {
+            "name": "Salchipapa",
+            "price": 42500,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T15:43:40.459Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:45:00.873Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "13ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:45:14.583Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:45:14.586Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.076Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.080Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "2ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.124Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.125Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.130Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.132Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.132Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:34.276Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/favicon-32x32.png",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/favicon-32x32.png",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:51.004Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "email": "user@example.com",
+        "password": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:46:51.104Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "89ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:47:10.981Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "string",
+          "email": "user@example.com"
+        },
+        "products": [
+          {
+            "name": "string",
+            "price": 0,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T15:47:07.315Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:47:10.986Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Product string must have a price greater than 0"
+      ],
+      "body": {
+        "customer": {
+          "name": "string",
+          "email": "user@example.com"
+        },
+        "products": [
+          {
+            "name": "string",
+            "price": 0,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T15:47:07.315Z"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:47:10.992Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "9ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:47:42.010Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "string",
+          "email": "user@example.com"
+        },
+        "products": [
+          {
+            "name": "Audifonos",
+            "price": 230700,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T15:47:07.315Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:47:42.016Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "4ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:00.791Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:00.801Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "2ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:32.867Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "user@example.com"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:32.872Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:47.507Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/status",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/status",
+      "body": {},
+      "params": {},
+      "query": {
+        "status": "pending"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:48:47.522Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "2ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:22.118Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/a316e354-a417-44e6-a2ae-ebd16691f47d",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/a316e354-a417-44e6-a2ae-ebd16691f47d",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:22.125Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:28.880Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/a316e354-a417-44e6-a2ae-ebd16691f",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/a316e354-a417-44e6-a2ae-ebd16691f",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:28.887Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:56.724Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/a316e354-a417-44e6-a2ae-ebd16691f47d/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/a316e354-a417-44e6-a2ae-ebd16691f47d/status",
+      "body": {
+        "status": "completed"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:49:56.730Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:51:44.561Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "email": "user@example.com",
+        "password": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:51:44.659Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "89ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:18.683Z",
+    "level": "INFO",
+    "message": "Server running at http://localhost:3000",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:55:18.684Z",
+    "level": "INFO",
+    "message": "Swagger documentation available at http://localhost:3000/api-docs",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.426Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.428Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.456Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.457Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.458Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.460Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.461Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:24.576Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/favicon-32x32.png",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/favicon-32x32.png",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:36.613Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "email": "user@example.com",
+        "password": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:55:36.615Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:56:37.502Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/register",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "body": {
+        "email": "user@example.com",
+        "password": "string",
+        "name": "cam"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:56:37.589Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "83ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:56:53.885Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/login",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "body": {
+        "email": "user@example.com",
+        "password": "string"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:56:53.985Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "97ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:57:06.141Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/auth/register",
+    "data": {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "body": {
+        "email": "user@example.com",
+        "password": "string",
+        "name": "cam"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:57:06.144Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:57:17.391Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:57:17.396Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "3ms"
+    }
   }
 ]
