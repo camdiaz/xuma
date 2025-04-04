@@ -51,7 +51,7 @@ orders-management-system/
 
 1. Clonar el repositorio:
    ```
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/camdiaz/xuma.git
    cd orders-management-system
    ```
 
