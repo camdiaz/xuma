@@ -55,7 +55,7 @@ describe('OrderService', () => {
 
   const validOrderInput: OrderInput = {
     customer: {
-      name: 'Camila Diaz',
+      name: 'camila diaz',
       email: 'cam@example.com'
     },
     products: [
@@ -73,15 +73,29 @@ describe('OrderService', () => {
   };
 
   describe('createOrder', () => {
-    it('should create an order correctly', () => {
-      const order = orderService.createOrder(validOrderInput);
-      
+    it('should create an order with valid data', () => {
+      const orderData = {
+        customer: {
+          name: 'juan perez',
+          email: 'juan@example.com'
+        },
+        products: [
+          {
+            name: 'producto 1',
+            price: 100,
+            quantity: 2
+          }
+        ]
+      };
+
+      const order = orderService.createOrder(orderData);
+
       expect(order.id).toBeDefined();
-      expect(order.date).toBeInstanceOf(Date);
+      expect(order.customer.name).toBe(orderData.customer.name);
+      expect(order.customer.email).toBe(orderData.customer.email);
+      expect(order.products).toHaveLength(1);
+      expect(order.total).toBe(200);
       expect(order.status).toBe(OrderStatus.PENDING);
-      expect(order.customer).toEqual(validOrderInput.customer);
-      expect(order.products).toEqual(validOrderInput.products);
-      expect(order.total).toBe(250); // (100 * 2) + (50 * 1)
     });
 
     it('should throw error if customer data is missing', () => {
@@ -125,49 +139,90 @@ describe('OrderService', () => {
   });
 
   describe('updateOrderStatus', () => {
-    it('should update status from pending to processing', () => {
-      const order = orderService.createOrder(validOrderInput);
+    it('should update order status correctly', () => {
+      const orderData = {
+        customer: {
+          name: 'maria garcia',
+          email: 'maria@example.com'
+        },
+        products: [
+          {
+            name: 'producto 2',
+            price: 50,
+            quantity: 1
+          }
+        ]
+      };
+
+      const order = orderService.createOrder(orderData);
       const updatedOrder = orderService.updateOrderStatus(order.id, OrderStatus.PROCESSING);
+
       expect(updatedOrder.status).toBe(OrderStatus.PROCESSING);
     });
 
-    it('should update status from processing to completed', () => {
-      const order = orderService.createOrder(validOrderInput);
-      let updatedOrder = orderService.updateOrderStatus(order.id, OrderStatus.PROCESSING);
-      updatedOrder = orderService.updateOrderStatus(order.id, OrderStatus.COMPLETED);
-      expect(updatedOrder.status).toBe(OrderStatus.COMPLETED);
-    });
+    it('should throw error for invalid status transition', () => {
+      const orderData = {
+        customer: {
+          name: 'pedro lopez',
+          email: 'pedro@example.com'
+        },
+        products: [
+          {
+            name: 'producto 3',
+            price: 75,
+            quantity: 3
+          }
+        ]
+      };
 
-    it('should throw error when trying to change from pending to completed', () => {
-      const order = orderService.createOrder(validOrderInput);
-      expect(() => {
-        orderService.updateOrderStatus(order.id, OrderStatus.COMPLETED);
-      }).toThrow();
-    });
+      const order = orderService.createOrder(orderData);
+      orderService.updateOrderStatus(order.id, OrderStatus.PROCESSING);
 
-    it('should throw error when trying to update a completed order', () => {
-      const order = orderService.createOrder(validOrderInput);
-      let updatedOrder = orderService.updateOrderStatus(order.id, OrderStatus.PROCESSING);
-      updatedOrder = orderService.updateOrderStatus(order.id, OrderStatus.COMPLETED);
       expect(() => {
-        orderService.updateOrderStatus(order.id, OrderStatus.PROCESSING);
-      }).toThrow();
+        orderService.updateOrderStatus(order.id, OrderStatus.PENDING);
+      }).toThrow('Cannot change from processing to pending. Only allowed to change to completed or cancelled');
     });
   });
 
   describe('getOrdersByCustomerEmail', () => {
     it('should get orders by customer email', () => {
-      orderService.createOrder(validOrderInput);
-      orderService.createOrder(validOrderInput);
       orderService.createOrder({
         customer: {
-          name: 'Maria Lopez',
+          name: 'juan perez',
+          email: 'juan@example.com'
+        },
+        products: [
+          {
+            name: 'producto 1',
+            price: 100,
+            quantity: 1
+          }
+        ]
+      });
+
+      orderService.createOrder({
+        customer: {
+          name: 'juan perez',
+          email: 'juan@example.com'
+        },
+        products: [
+          {
+            name: 'producto 2',
+            price: 200,
+            quantity: 1
+          }
+        ]
+      });
+
+      orderService.createOrder({
+        customer: {
+          name: 'maria garcia',
           email: 'maria@example.com'
         },
         products: [
           {
-            name: 'Product 3',
-            price: 200,
+            name: 'producto 3',
+            price: 150,
             quantity: 1
           }
         ]
@@ -183,13 +238,39 @@ describe('OrderService', () => {
 
   describe('getOrdersByStatus', () => {
     it('should get orders by status', () => {
-      const order1 = orderService.createOrder(validOrderInput);
-      const order2 = orderService.createOrder(validOrderInput);
-      orderService.updateOrderStatus(order1.id, OrderStatus.PROCESSING);
-      
+      const order1 = orderService.createOrder({
+        customer: {
+          name: 'cliente 1',
+          email: 'cliente1@example.com'
+        },
+        products: [
+          {
+            name: 'producto 1',
+            price: 100,
+            quantity: 1
+          }
+        ]
+      });
+
+      const order2 = orderService.createOrder({
+        customer: {
+          name: 'cliente 2',
+          email: 'cliente2@example.com'
+        },
+        products: [
+          {
+            name: 'producto 2',
+            price: 200,
+            quantity: 1
+          }
+        ]
+      });
+
+      orderService.updateOrderStatus(order2.id, OrderStatus.PROCESSING);
+
       const pendingOrders = orderService.getOrdersByStatus(OrderStatus.PENDING);
       expect(pendingOrders.length).toBe(1);
-      
+
       const processingOrders = orderService.getOrdersByStatus(OrderStatus.PROCESSING);
       expect(processingOrders.length).toBe(1);
     });

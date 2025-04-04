@@ -1570,5 +1570,501 @@
       "statusCode": 200,
       "responseTime": "3ms"
     }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.407Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "Test Customer",
+          "email": "customer@test.com"
+        },
+        "products": [
+          {
+            "name": "Test product",
+            "price": 100,
+            "quantity": 2
+          }
+        ]
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.410Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.434Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.435Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.440Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "customer@test.com"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.441Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.443Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/status",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/status",
+      "body": {},
+      "params": {},
+      "query": {
+        "status": "pending"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.444Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.446Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/undefined",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/undefined",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.447Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.449Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/undefined/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/undefined/status",
+      "body": {
+        "status": "processing"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.450Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.452Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/undefined/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/undefined/status",
+      "body": {
+        "status": "pending"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.453Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.455Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": []
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:44.455Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.232Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "Test Customer",
+          "email": "customer@test.com"
+        },
+        "products": [
+          {
+            "name": "Test product",
+            "price": 100,
+            "quantity": 2
+          }
+        ]
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.234Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.243Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.244Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.247Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "customer@test.com"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.248Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.250Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/status",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/status",
+      "body": {},
+      "params": {},
+      "query": {
+        "status": "pending"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.250Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.252Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/undefined",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/undefined",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.253Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.255Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/undefined/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/undefined/status",
+      "body": {
+        "status": "processing"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.256Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.259Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/undefined/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/undefined/status",
+      "body": {
+        "status": "pending"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.260Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.262Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": []
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:01:59.262Z",
+    "level": "INFO",
+    "message": "Response sent: 401",
+    "data": {
+      "statusCode": 401,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:06:02.796Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Customer name is required",
+        "Invalid email format",
+        "Product at position 0 must have a name",
+        "Product at position 0 must have a price greater than 0",
+        "Product at position 0 must have a quantity greater than 0 and be an integer"
+      ],
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": [
+          {
+            "name": "",
+            "price": -100,
+            "quantity": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:06:17.376Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Customer name is required",
+        "Invalid email format",
+        "Product at position 0 must have a name",
+        "Product at position 0 must have a price greater than 0",
+        "Product at position 0 must have a quantity greater than 0 and be an integer"
+      ],
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": [
+          {
+            "name": "",
+            "price": -100,
+            "quantity": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:07:38.119Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Customer name is required",
+        "Invalid email format",
+        "Product at position 0 must have a name",
+        "Product at position 0 must have a price greater than 0",
+        "Product at position 0 must have a quantity greater than 0 and be an integer"
+      ],
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": [
+          {
+            "name": "",
+            "price": -100,
+            "quantity": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T16:07:44.559Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Customer name is required",
+        "Invalid email format",
+        "Product at position 0 must have a name",
+        "Product at position 0 must have a price greater than 0",
+        "Product at position 0 must have a quantity greater than 0 and be an integer"
+      ],
+      "body": {
+        "customer": {
+          "name": "",
+          "email": "invalid-email"
+        },
+        "products": [
+          {
+            "name": "",
+            "price": -100,
+            "quantity": 0
+          }
+        ]
+      }
+    }
   }
 ]

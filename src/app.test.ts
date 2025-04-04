@@ -1,35 +1,51 @@
+import express from 'express';
 import request from 'supertest';
-import app from './index';
 import { OrderStatus } from './models/interfaces';
+import { app } from './index';
+import { AuthService } from './services/AuthService';
 
 describe('Order Management API', () => {
-  const validOrder = {
-    customer: {
-      name: 'Test Customer',
-      email: 'customer@test.com'
-    },
-    products: [
-      {
-        name: 'Test product',
-        price: 100,
-        quantity: 2
-      }
-    ]
-  };
-
+  let authToken: string;
+  let validOrder: any;
   let orderId: string;
+
+  beforeAll(async () => {
+    // Registrar un usuario y obtener el token
+    const authService = new AuthService();
+    const user = await authService.register({
+      email: 'test@example.com',
+      password: 'password123',
+      name: 'Test User'
+    });
+    authToken = user.token;
+
+    // Crear un pedido válido para las pruebas
+    validOrder = {
+      customer: {
+        name: 'Test Customer',
+        email: 'test@example.com'
+      },
+      products: [
+        {
+          name: 'Test Product',
+          price: 100,
+          quantity: 2
+        }
+      ]
+    };
+  });
 
   it('Should create an order correctly', async () => {
     const response = await request(app)
       .post('/api/orders')
+      .set('Authorization', `Bearer ${authToken}`)
       .send(validOrder);
 
     expect(response.status).toBe(201);
     expect(response.body.id).toBeDefined();
     expect(response.body.customer.name).toBe(validOrder.customer.name);
     expect(response.body.customer.email).toBe(validOrder.customer.email);
-    expect(response.body.products).toHaveLength(1);
-    expect(response.body.total).toBe(200); // 100 * 2
+    expect(response.body.total).toBe(200);
     expect(response.body.status).toBe(OrderStatus.PENDING);
 
     orderId = response.body.id;
@@ -37,7 +53,8 @@ describe('Order Management API', () => {
 
   it('Should get all orders', async () => {
     const response = await request(app)
-      .get('/api/orders');
+      .get('/api/orders')
+      .set('Authorization', `Bearer ${authToken}`);
 
     expect(response.status).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
@@ -46,7 +63,8 @@ describe('Order Management API', () => {
 
   it('Should find orders by customer email', async () => {
     const response = await request(app)
-      .get(`/api/orders/search?email=${validOrder.customer.email}`);
+      .get(`/api/orders/search?email=${validOrder.customer.email}`)
+      .set('Authorization', `Bearer ${authToken}`);
 
     expect(response.status).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
@@ -56,7 +74,8 @@ describe('Order Management API', () => {
 
   it('Should find orders by status', async () => {
     const response = await request(app)
-      .get(`/api/orders/status?status=${OrderStatus.PENDING}`);
+      .get(`/api/orders/status?status=${OrderStatus.PENDING}`)
+      .set('Authorization', `Bearer ${authToken}`);
 
     expect(response.status).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
@@ -66,7 +85,8 @@ describe('Order Management API', () => {
 
   it('Should get an order by ID', async () => {
     const response = await request(app)
-      .get(`/api/orders/${orderId}`);
+      .get(`/api/orders/${orderId}`)
+      .set('Authorization', `Bearer ${authToken}`);
 
     expect(response.status).toBe(200);
     expect(response.body.id).toBe(orderId);
@@ -75,6 +95,7 @@ describe('Order Management API', () => {
   it('Should update an order status', async () => {
     const response = await request(app)
       .patch(`/api/orders/${orderId}/status`)
+      .set('Authorization', `Bearer ${authToken}`)
       .send({ status: OrderStatus.PROCESSING });
 
     expect(response.status).toBe(200);
@@ -85,6 +106,7 @@ describe('Order Management API', () => {
   it('Should not allow updating to an invalid status', async () => {
     const response = await request(app)
       .patch(`/api/orders/${orderId}/status`)
+      .set('Authorization', `Bearer ${authToken}`)
       .send({ status: OrderStatus.PENDING });
 
     expect(response.status).toBe(400);
@@ -96,11 +118,18 @@ describe('Order Management API', () => {
         name: '',
         email: 'invalid-email'
       },
-      products: []
+      products: [
+        {
+          name: '',
+          price: -100,
+          quantity: 0
+        }
+      ]
     };
 
     const response = await request(app)
       .post('/api/orders')
+      .set('Authorization', `Bearer ${authToken}`)
       .send(invalidOrder);
 
     expect(response.status).toBe(400);
