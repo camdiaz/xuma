@@ -1,0 +1,513 @@
+[
+  {
+    "timestamp": "2025-04-04T14:41:09.533Z",
+    "level": "INFO",
+    "message": "Server running at http://localhost:3000",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T14:41:09.534Z",
+    "level": "INFO",
+    "message": "Swagger documentation available at http://localhost:3000/api-docs",
+    "data": null
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.173Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.176Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.252Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-bundle.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-bundle.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.254Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-standalone-preset.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-standalone-preset.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.263Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui.css",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui.css",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.265Z",
+    "level": "INFO",
+    "message": "Request received: GET /api-docs/swagger-ui-init.js",
+    "data": {
+      "method": "GET",
+      "path": "/api-docs/swagger-ui-init.js",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:41:21.265Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:05.425Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "admin",
+          "email": "admin123@example.com"
+        },
+        "products": [
+          {
+            "name": "admin",
+            "price": 0,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T14:41:50.571Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:05.426Z",
+    "level": "WARNING",
+    "message": "Validation failed on order creation",
+    "data": {
+      "errors": [
+        "Product admin must have a price greater than 0"
+      ],
+      "body": {
+        "customer": {
+          "name": "admin",
+          "email": "admin123@example.com"
+        },
+        "products": [
+          {
+            "name": "admin",
+            "price": 0,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T14:41:50.571Z"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:05.427Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:36.476Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "admin",
+          "email": "admin123@example.com"
+        },
+        "products": [
+          {
+            "name": "Factura",
+            "price": 60000,
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T14:41:50.571Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:36.487Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "4ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:48.192Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:42:48.195Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:43:25.036Z",
+    "level": "INFO",
+    "message": "Request received: POST /api/orders",
+    "data": {
+      "method": "POST",
+      "path": "/api/orders",
+      "body": {
+        "customer": {
+          "name": "testing",
+          "email": "testing@example.com"
+        },
+        "products": [
+          {
+            "name": "Botella de agua",
+            "price": 2000,
+            "quantity": 7
+          }
+        ],
+        "status": "pending",
+        "date": "2025-04-04T14:41:50.571Z"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:43:25.044Z",
+    "level": "INFO",
+    "message": "Response sent: 201",
+    "data": {
+      "statusCode": 201,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:43:36.800Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:43:36.803Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:45:22.386Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "testing"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:45:22.390Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:06.549Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "testing@example.com"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:06.552Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "1ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:14.530Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "testing@example"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:14.536Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:38.818Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/search",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/search",
+      "body": {},
+      "params": {},
+      "query": {
+        "email": "@example.com"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T14:46:38.824Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:04:34.950Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/status",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/status",
+      "body": {},
+      "params": {},
+      "query": {
+        "status": "processing"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:04:34.957Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:04:40.493Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/status",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/status",
+      "body": {},
+      "params": {},
+      "query": {
+        "status": "pending"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:04:40.494Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "0ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:05:21.630Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:05:21.646Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "2ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:05:48.317Z",
+    "level": "INFO",
+    "message": "Request received: GET /api/orders/8a5c2601-eceb-4774-ae4b-ff9c415446",
+    "data": {
+      "method": "GET",
+      "path": "/api/orders/8a5c2601-eceb-4774-ae4b-ff9c415446",
+      "body": {},
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:05:48.323Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "3ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:06:37.996Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+      "body": {
+        "status": "processing"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:06:38.008Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "7ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:08:31.484Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+      "body": {
+        "status": "completed"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:08:31.493Z",
+    "level": "INFO",
+    "message": "Response sent: 200",
+    "data": {
+      "statusCode": 200,
+      "responseTime": "4ms"
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:08:40.928Z",
+    "level": "INFO",
+    "message": "Request received: PATCH /api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+    "data": {
+      "method": "PATCH",
+      "path": "/api/orders/8a5c2601-eceb-4774-ae4b-ff9c41544694/status",
+      "body": {
+        "status": "processing"
+      },
+      "params": {},
+      "query": {}
+    }
+  },
+  {
+    "timestamp": "2025-04-04T15:08:40.930Z",
+    "level": "INFO",
+    "message": "Response sent: 400",
+    "data": {
+      "statusCode": 400,
+      "responseTime": "1ms"
+    }
+  }
+]
